@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Page Not Found</title>
+    <script type="text/javascript">
+      (function() {
+        var pathname = window.location.pathname;
+        // Redirigir a index.html manteniendo la ruta original
+        if (!pathname.includes('/index.html')) {
+          var redirectTo = window.location.protocol + '//' + window.location.host + '/JoaquinBurgos1.github.io/index.html' + pathname + window.location.search + window.location.hash;
+          window.location.replace(redirectTo);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <h1>404 - Not Found</h1>
+  </body>
+</html>
