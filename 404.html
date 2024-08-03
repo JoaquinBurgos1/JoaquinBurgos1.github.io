@@ -6,9 +6,11 @@
     <script type="text/javascript">
       (function() {
         var pathname = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
         // Redirigir a index.html manteniendo la ruta original
-        if (!pathname.includes('/index.html')) {
-          var redirectTo = window.location.protocol + '//' + window.location.host + '/JoaquinBurgos1.github.io/index.html' + pathname + window.location.search + window.location.hash;
+        if (pathname !== '/' && !pathname.startsWith('/JoaquinBurgos1.github.io/')) {
+          var redirectTo = window.location.protocol + '//' + window.location.host + '/JoaquinBurgos1.github.io/index.html' + pathname + search + hash;
           window.location.replace(redirectTo);
         }
       })();
